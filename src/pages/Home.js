@@ -3,7 +3,7 @@ import NavigationBar from '../components/NavigationBar'
 import PokemonCard from '../components/PokemonCard'
 import { Row, Spinner } from 'react-bootstrap'
 import '../asset/css/home.css'
-import { pokeApi } from '../util/api'
+import { pokeApi } from '../axios/'
 
 const Home = () => {
 

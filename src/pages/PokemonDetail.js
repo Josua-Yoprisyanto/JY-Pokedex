@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import NavigationBar from '../components/NavigationBar'
-import { pokeApi } from '../util/api';
+import { pokeApi } from '../axios/';
 import '../asset/css/pokemondetail.css'
 import { ProgressBar, Row, Col, Spinner } from 'react-bootstrap';
 
@@ -14,7 +14,7 @@ const PokemonDetail = () => {
   const [title, setTitle] = useState("")
   const getDetail = async () => {
     await axios.get(`${pokeApi}pokemon/${params.name}`)
-    .then((res) => setDetail(res.data))
+      .then((res) => setDetail(res.data))
     setLoading(true)
   }
 
